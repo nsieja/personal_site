@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <link rel="stylesheet" href="locationsStyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='utf-8'>
+    <title>Nick's Homes</title>
+</head>
+
+<body>
+    <main id='main-doc'>
+        <nav id='navbar'>
+            <ul>
+                <li><a class='nav-link' href="index.html">About</a></li>
+                <li><a class='nav-link' href="resume.html">Resumé</a></li>
+                <li id="current"><a class='nav-link' href="#">Geography</a></li>
+            </ul>
+        </nav>
+        <div class='content'>
+            <h1>My Geographic History</h1>
+            <div class="locations" id="map">
+                <iframe
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1YCnmH8c3ItdW1N5oMr2QblrwTSHem7E&ehbc=2E312F&noprof=1&zoom=80"
+                    loading="lazy" allowfullscreen="">
+                </iframe>
+            </div>
+            <div class="weather">
+                <h2>What's the weather right now?</h2>
+                <hr id="accent">
+                <div id="place">
+                    <ul>
+                        <li><button id='home dearborn' onclick="pickPlace(0); highlight(this)">Dearborn</button></li>
+                        <li><button id='home madison' onclick="pickPlace(1); highlight(this)">Madison</button></li>
+                        <li><button id='home boston' onclick="pickPlace(2); highlight(this)">Boston</button></li>
+                        <li><button id='home kwajalein' onclick="pickPlace(3); highlight(this)">Kwajalein</button></li>
+                        <li><button id='home orcutt' onclick="pickPlace(4); highlight(this)">Orcutt</button></li>
+                        <li><button id='home durham' onclick="pickPlace(5); highlight(this)">Durham</button></li>
+                        <li><button id='home charleston' onclick="pickPlace(6); highlight(this)">Charleston</button>
+                        </li>
+                        <li><button id='home kailua' onclick="pickPlace(7); highlight(this)">Kailua</button></li>
+                    </ul>
+                </div>
+                <div id="weatherData">
+                    <div id="weatherBox">
+                        <img class='weatherPic' src="assets/temperature.png" alt="thermostat">
+                        <p id="temperature"></p>
+                    </div>
+                    <div id="weatherBox">
+                        <img class='weatherPic' src="assets/wind.png" alt="humidity">
+                        <p id="wind"></p>
+                    </div>
+                    <div id="weatherBox">
+                        <img class='weatherPic' src="assets/sky.png" alt="sun">
+                        <p id="sky"></p>
+                    </div>
+                </div>
+                <hr id="accent">
+                <div id="about">
+                </div>
+            </div>
+            <section id='contact' class="grid">
+                <h3>Get in Touch</h3>
+                <img id="mail" src="assets/email.png" alt="email">
+                <p class="leading">nsieja@gmail.com</p>
+            </section>
+        </div>
+    </main>
+    <script src="locations.js"></script>
+</body>
+
+</html>

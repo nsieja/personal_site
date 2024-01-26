@@ -1,0 +1,124 @@
+:root {
+    --textColor: #d6d3d3;
+    --backgroundColor: #111;
+    --navBackgroundColor: #222;
+    --accentColor1: #fa993f;
+    --accentColor2: #FC8A17;
+    --buttonShadow: #444;
+    --navHeight: 60px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+#navbar {
+    background-color: var(--navBackgroundColor);
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--navHeight);
+    z-index: 100;
+}
+
+#navbar ul {
+    list-style: none;
+    height: 100%;
+    margin-top: 0;
+}
+
+#navbar ul li {
+    display: inline-block;
+    padding: 0px 15px;
+    line-height: var(--navHeight);
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--textColor);
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+    color: var(--accentColor1);
+}
+
+#current {
+    background-color: var(--buttonShadow);
+}
+
+.content {
+    padding: var(--navHeight) 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.top {
+    display: block;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: var(--accentColor1);
+}
+
+h1 {
+    font-size: 24pt;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20pt;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+a {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--accentColor2);
+}
+
+.divider {
+    border: 1px solid #464646b0;
+    margin: 40px 0px;
+}
+
+p {
+    font-size: 12pt;
+    color: var(--textColor);
+    margin-bottom: 10px;
+}
+
+li:not(.nav) {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#bodLink::before {
+    content: "\2022";
+    color: var(--accentColor2);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: 0em;
+    list-style-position: inside;
+}
