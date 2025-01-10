@@ -1,11 +1,12 @@
 :root {
-    --textColor: #d6d3d3;
-    --backgroundColor: #111;
-    --navBackgroundColor: #222;
-    --accentColor1: #fa993f;
-    --accentColor2: #FC8A17;
-    --buttonShadow: #444;
-    --navHeight: 60px;
+    --textColor: #ffffff;
+    --backgroundColor: #0a192f;
+    --navBackgroundColor: #112240;
+    --accentColor1: #64ffda;
+    --accentColor2: #ffc107;
+    --buttonShadow: #2a3948;
+    --navHeight: 50px;
+    --fontSize: 16px;
 }
 
 body {
@@ -26,24 +27,26 @@ body {
     width: 100%;
     height: var(--navHeight);
     z-index: 100;
+    padding: 0 10px;
 }
 
 #navbar ul {
     list-style: none;
     height: 100%;
     margin-top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #navbar ul li {
-    display: inline-block;
-    padding: 0px 15px;
-    line-height: var(--navHeight);
+    padding: 0 10px;
 }
 
 #navbar a {
     text-decoration: none;
     color: var(--textColor);
-    font-size: larger;
+    font-size: 1.1rem;
     font-weight: bolder;
 }
 
@@ -64,6 +67,7 @@ h1 {
     text-align: center;
     margin: 0px auto;
     padding-top: var(--navHeight);
+    color: var(--accentColor1);
 }
 
 #map {
@@ -92,6 +96,7 @@ h1 {
     padding: 10px 20px;
     margin: 0 auto;
     text-decoration: underline;
+    color: var(--accentColor1);
 }
 
 #accent {
@@ -199,7 +204,6 @@ h1 {
 /* Formatting for mobile */
 
 @media (max-width: 600px) {
-
     .nav ul li {
         display: block;
         margin-bottom: 10px;
@@ -211,6 +215,5 @@ h1 {
 @media only screen and (min-width: 601px) {
     #place ul li {
         flex: 0 0 calc(12.5% - 10px);
-        /* Adjust the width as needed with margin */
     }
 }
