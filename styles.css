@@ -273,6 +273,15 @@ body {
   }
 
   .button {
-    width: 100%;
+    width: 150px;
+    /* Set a fixed width for buttons on mobile */
+    margin: 10px;
+    /* Add margin to separate the buttons */
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
