@@ -1,0 +1,198 @@
+:root {
+    --textColor: #ffffff;
+    --backgroundColor: #0a192f;
+    --navBackgroundColor: #112240;
+    --accentColor1: #64ffda;
+    --accentColor2: #ffc107;
+    --buttonShadow: #2a3948;
+    --navHeight: 50px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+#navbar {
+    background-color: var(--navBackgroundColor);
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--navHeight);
+    z-index: 100;
+    padding: 0 10px;
+}
+
+#navbar ul {
+    list-style: none;
+    height: 100%;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+#navbar ul li {
+    padding: 0 10px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--textColor);
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+    color: var(--accentColor1);
+}
+
+#current {
+    background-color: var(--buttonShadow);
+}
+
+.content {
+    padding: calc(var(--navHeight) + 10px) 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.top {
+    display: block;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: var(--accentColor1);
+}
+
+h1 {
+    font-size: 24pt;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18pt;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--accentColor1);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--accentColor2);
+}
+
+.divider {
+    border: 1px solid var(--buttonShadow);
+    margin: 30px 0;
+}
+
+p,
+#education p {
+    font-size: 16pt;
+    color: var(--textColor);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+li:not(.nav) {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+#bodLink::before {
+    content: "\2022";
+    color: var(--accentColor2);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: 0.5em;
+    list-style-position: inside;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skills-section div {
+    width: 30%;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 22pt;
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    p {
+        font-size: 14pt;
+    }
+
+    .skills-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #navbar ul {
+        justify-content: center;
+    }
+
+    #navbar a {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: calc(var(--navHeight) + 10px) 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar ul li {
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 20pt;
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    p {
+        font-size: 13pt;
+    }
+
+    .content {
+        padding: calc(var(--navHeight) + 10px) 10px;
+    }
+}
