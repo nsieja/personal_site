@@ -15,7 +15,7 @@ body {
     background-color: var(--backgroundColor);
     color: var(--textColor);
     box-sizing: border-box;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 #navbar {
@@ -34,12 +34,11 @@ body {
     height: 100%;
     margin-top: 0;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
 #navbar ul li {
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 #navbar a {
@@ -59,8 +58,8 @@ body {
 }
 
 .content {
-    padding: calc(var(--navHeight) + 15px) 20px;
-    max-width: 900px;
+    padding: calc(var(--navHeight) + 10px) 20px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
